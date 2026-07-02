@@ -1,0 +1,80 @@
+export interface UkraineCityEntry {
+  uk: string;
+  en: string;
+}
+
+export const UKRAINE_CITIES: UkraineCityEntry[] = [
+  { uk: 'Алчевськ', en: 'Alchevsk' },
+  { uk: 'Бердянськ', en: 'Berdyansk' },
+  { uk: 'Бердичів', en: 'Berdychiv' },
+  { uk: 'Біла Церква', en: 'Bila Tserkva' },
+  { uk: 'Бровари', en: 'Brovary' },
+  { uk: 'Вінниця', en: 'Vinnytsia' },
+  { uk: 'Горлівка', en: 'Horlivka' },
+  { uk: 'Дніпро', en: 'Dnipro' },
+  { uk: 'Донецьк', en: 'Donetsk' },
+  { uk: 'Дрогобич', en: 'Drohobych' },
+  { uk: 'Дружківка', en: 'Druzhkivka' },
+  { uk: 'Євпаторія', en: 'Yevpatoria' },
+  { uk: 'Єнакієве', en: 'Yenakiieve' },
+  { uk: 'Житомир', en: 'Zhytomyr' },
+  { uk: 'Запоріжжя', en: 'Zaporizhzhia' },
+  { uk: 'Звягель', en: 'Zviahel' },
+  { uk: 'Івано-Франківськ', en: 'Ivano-Frankivsk' },
+  { uk: 'Ізмаїл', en: 'Izmail' },
+  { uk: 'Ізюм', en: 'Izium' },
+  { uk: 'Калуш', en: 'Kalush' },
+  { uk: 'Кам\'янське', en: 'Kamianske' },
+  { uk: 'Кам\'янець-Подільський', en: 'Kamianets-Podilskyi' },
+  { uk: 'Керч', en: 'Kerch' },
+  { uk: 'Київ', en: 'Kyiv' },
+  { uk: 'Ковель', en: 'Kovel' },
+  { uk: 'Коломия', en: 'Kolomyia' },
+  { uk: 'Конотоп', en: 'Konotop' },
+  { uk: 'Костянтинівка', en: 'Kostiantynivka' },
+  { uk: 'Краматорськ', en: 'Kramatorsk' },
+  { uk: 'Кременчук', en: 'Kremenchuk' },
+  { uk: 'Кривий Ріг', en: 'Kryvyi Rih' },
+  { uk: 'Кропивницький', en: 'Kropyvnytskyi' },
+  { uk: 'Лисичанськ', en: 'Lysychansk' },
+  { uk: 'Луганськ', en: 'Luhansk' },
+  { uk: 'Луцьк', en: 'Lutsk' },
+  { uk: 'Львів', en: 'Lviv' },
+  { uk: 'Макіївка', en: 'Makiivka' },
+  { uk: 'Маріуполь', en: 'Mariupol' },
+  { uk: 'Мелітополь', en: 'Melitopol' },
+  { uk: 'Миколаїв', en: 'Mykolaiv' },
+  { uk: 'Мукачево', en: 'Mukachevo' },
+  { uk: 'Нікополь', en: 'Nikopol' },
+  { uk: 'Нова Каховка', en: 'Nova Kakhovka' },
+  { uk: 'Одеса', en: 'Odesa' },
+  { uk: 'Павлоград', en: 'Pavlohrad' },
+  { uk: 'Полтава', en: 'Poltava' },
+  { uk: 'Рівне', en: 'Rivne' },
+  { uk: 'Севастополь', en: 'Sevastopol' },
+  { uk: 'Сєвєродонецьк', en: 'Sievierodonetsk' },
+  { uk: 'Сімферополь', en: 'Simferopol' },
+  { uk: 'Слов\'янськ', en: 'Sloviansk' },
+  { uk: 'Суми', en: 'Sumy' },
+  { uk: 'Тернопіль', en: 'Ternopil' },
+  { uk: 'Ужгород', en: 'Uzhhorod' },
+  { uk: 'Умань', en: 'Uman' },
+  { uk: 'Феодосія', en: 'Feodosia' },
+  { uk: 'Харків', en: 'Kharkiv' },
+  { uk: 'Херсон', en: 'Kherson' },
+  { uk: 'Хмельницький', en: 'Khmelnytskyi' },
+  { uk: 'Черкаси', en: 'Cherkasy' },
+  { uk: 'Чернівці', en: 'Chernivtsi' },
+  { uk: 'Чернігів', en: 'Chernihiv' },
+  { uk: 'Шостка', en: 'Shostka' },
+  { uk: 'Ялта', en: 'Yalta' },
+  { uk: 'Енергодар', en: 'Enerhodar' },
+];
+
+export function getCityDisplayName(city: UkraineCityEntry, lang: 'uk' | 'en'): string {
+  return lang === 'en' ? city.en : city.uk;
+}
+
+export function findUkraineCityByUkName(ukName: string): UkraineCityEntry | undefined {
+  return UKRAINE_CITIES.find((city) => city.uk === ukName);
+}

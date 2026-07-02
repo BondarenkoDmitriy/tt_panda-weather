@@ -1,0 +1,86 @@
+.weather-block {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.weather-block__toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.weather-block__search {
+  width: 100%;
+  min-width: 0;
+}
+
+.weather-block__controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.weather-block__error {
+  color: var(--danger);
+  text-align: left;
+  padding: 12px;
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  word-break: break-word;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 8px;
+}
+
+.weather-block__empty {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 32px;
+}
+
+.weather-block__week-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.weather-block__week-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--hover-bg);
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.weather-block__week-day {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.weather-block__week-temp {
+  color: var(--text-secondary);
+}
+
+.weather-block__week-avg {
+  color: var(--accent);
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .weather-block__controls {
+    justify-content: space-between;
+  }
+}

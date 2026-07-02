@@ -1,0 +1,10 @@
+.temperature-chart {
+  height: 220px;
+  margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+  .temperature-chart {
+    height: 180px;
+  }
+}

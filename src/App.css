@@ -1,0 +1,247 @@
+.app {
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.app__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.app__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.app__header-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app__api-warning {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.app__tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app__tab {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.app__tab:hover {
+  color: var(--text-primary);
+}
+
+.app__tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.app__tab-badge {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.app__main {
+  min-height: 400px;
+}
+
+.app__blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.app__loading-text,
+.app__empty,
+.app__limit-text {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40px 16px;
+}
+
+.app__favorite-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app__remove-fav {
+  align-self: flex-end;
+}
+
+.toggle-group {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  padding: 8px 14px;
+  border: none;
+  background: var(--input-bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.8125rem;
+  transition: all 0.2s;
+}
+
+.toggle-btn:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+.toggle-btn--active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.toggle-btn:hover:not(.toggle-btn--active) {
+  background: var(--hover-bg);
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn--secondary {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn--secondary:hover {
+  background: var(--border-color);
+}
+
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn--danger:hover {
+  filter: brightness(1.1);
+}
+
+.btn--icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--add {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 24px auto 0;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  padding: 14px;
+}
+
+.btn--add:hover {
+  filter: brightness(1.1);
+}
+
+.btn--small {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 479px) {
+  .app {
+    padding: 12px;
+  }
+
+  .app__title {
+    font-size: 1.375rem;
+  }
+
+  .app__blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .app__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .app__blocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app__blocks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .app__blocks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .app__blocks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
