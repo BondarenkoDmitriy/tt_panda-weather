@@ -1,5 +1,7 @@
 # Weather App
 
+[![Vercel](https://img.shields.io/badge/Live%20Demo-tt--panda--weather.vercel.app-000?style=flat&logo=vercel&logoColor=white)](https://tt-panda-weather.vercel.app)
+
 A test assignment weather application built with React + Vite + axios + Chart.js.
 
 ## TZ Requirements
